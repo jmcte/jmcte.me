@@ -8,7 +8,11 @@ on:
 jobs:
   lint-test-build:
     name: Lint, test, build
-    runs-on: ubuntu-latest
+    runs-on:
+      - self-hosted
+      - linux
+      - shell-only
+      - public
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
