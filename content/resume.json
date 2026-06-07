@@ -1,14 +1,18 @@
 {
-  "updatedAt": "2026-04-23T04:30:00Z",
+  "updatedAt": "2026-06-07T00:00:00Z",
   "experience": [
     {
       "title": "Senior Vice President, CIO – Shared Services and Infrastructure",
       "org": "USAA (San Antonio, TX)",
-      "startAt": "2023-01-01",
+      "startAt": "2023-02-01",
+      "endAt": "2026-06-08",
       "bullets": [
-        "Led engineering, infrastructure, and IT business services organization of 2,500+ resources.",
-        "Held $800M budget responsibility and PMO oversight for $100M in annual IT projects.",
-        "Ran shared services and infrastructure in a large, regulated financial-services environment with accountability for operational reliability, modernization, and execution discipline."
+        "Led USAA's shared services and infrastructure organization — IT PMO, core infrastructure (data centers, network, compute, and cloud), corporate IT, enterprise vendor management, and IT-wide governance — with $800M+ budget responsibility and oversight of $100M+ in annual IT projects.",
+        "Delivered a $294M reduction in third-party run-rate across IT, exceeding a $265M target a full year early without disrupting delivery.",
+        "Built and cut over a new production data center outside the ERCOT power grid in 18 months, retiring a long-standing enterprise resilience risk and self-funding the build within run budget.",
+        "Modernized the enterprise network from a legacy platform to a single modern fabric in 10 months and eradicated the majority of legacy infrastructure technical debt.",
+        "Converted a 25-year-old PeopleSoft general ledger to a cloud Oracle platform and scaled cloud adoption to enable 300+ cloud-native applications under managed FinOps.",
+        "Deployed generative-AI tooling for engineering and infrastructure teams and AI-powered ServiceNow platforms."
       ]
     },
     {

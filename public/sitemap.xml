@@ -2,61 +2,61 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jmcte.me/</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://jmcte.me/about</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://jmcte.me/projects</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://jmcte.me/resume</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://jmcte.me/contact</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://jmcte.me/llms.txt</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
     <loc>https://jmcte.me/profile.json</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://jmcte.me/agent-profile.json</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://jmcte.me/projects.json</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://jmcte.me/resume.json</loc>
-    <lastmod>2026-04-23T04:30:00.000Z</lastmod>
+    <lastmod>2026-06-07T00:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.50</priority>
   </url>
