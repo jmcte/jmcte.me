@@ -51,38 +51,38 @@ const slopmeterSnapshot = {
 
 const signalMetrics = [
   {
-    value: "2,500+",
-    label: "Resources led"
+    value: "3,200",
+    label: "Employees + partners led"
   },
   {
-    value: "$800M",
-    label: "Budget responsibility"
+    value: "$1.2B",
+    label: "Direct budget accountability"
   },
   {
-    value: "$100M",
-    label: "Annual IT projects overseen"
+    value: "$415M",
+    label: "Departmental budget reduction"
   }
 ];
 
 const operatingLanes: Lane[] = [
   {
-    title: "Enterprise architecture",
-    summary: "Technology direction across complex financial-services platforms and portfolios.",
+    title: "Enterprise technology strategy",
+    summary: "Business-aligned investment and architecture across P&C, banking, life, investment, and retirement.",
     icon: ShieldCheckIcon
   },
   {
     title: "Operational resilience",
-    summary: "Infrastructure, recoverability, reliability, and execution discipline under pressure.",
+    summary: "Infrastructure, cloud, recoverability, reliability, and modernization at regulated-enterprise scale.",
     icon: FolderKanbanIcon
   },
   {
-    title: "Executive governance",
-    summary: "Budget, PMO, vendor, and control structures tied to business outcomes.",
+    title: "Board and regulatory governance",
+    summary: "Technology economics, material risk, OCC and Federal Reserve engagement, and disciplined execution.",
     icon: FileTextIcon
   },
   {
-    title: "Modernization",
-    summary: "Cloud, data, AI, shared services, and platform simplification at enterprise scale.",
+    title: "M&A, investment and innovation",
+    summary: "Technology diligence, integration strategy, venture review, AI, and patented platform innovation.",
     icon: LockIcon
   }
 ];

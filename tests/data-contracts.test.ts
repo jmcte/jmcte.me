@@ -21,6 +21,7 @@ describe("machine-readable payloads", () => {
     expect(profile.socials.find((social) => social.label === "LinkedIn")?.url).toBe(
       "https://www.linkedin.com/in/johnmteneyckjr"
     );
+    expect(profile.bio).toContain("3,200-person global workforce");
   });
 
   it("exports projects payload contract", () => {
@@ -43,6 +44,9 @@ describe("machine-readable payloads", () => {
     expect(resumePayload.patents[0]?.patentNumber).toBe("12184814");
     expect(resumePayload.patents.every((patent) => patent.url.startsWith("https://patents.google.com/patent/US"))).toBe(true);
     expect(isoDate(resumePayload.updatedAt)).toBe(true);
+    expect(resumePayload.experience[0]?.endAt).toBe("2026-06-08");
+    expect(resumePayload.experience[0]?.bullets.join(" ")).toContain("$415M");
+    expect(resumePayload.experience[1]?.bullets.join(" ")).toContain("Noblr");
     expect(resumePayload.links.find((link) => link.label === "LinkedIn")?.url).toBe(
       "https://www.linkedin.com/in/johnmteneyckjr"
     );
