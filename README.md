@@ -69,11 +69,11 @@ If your project name is different, set `CLOUDFLARE_PAGES_PROJECT` in GitHub Acti
 
 ### Refreshing the Slopmeter snapshot
 
-The homepage Slopmeter image is generated from local Codex usage data. Refresh both the image and its displayed date range with:
+The homepage Slopmeter image is generated from local Claude Code, Codex, and OpenCode usage data. OpenCode includes its recorded Qwen-model usage. The refresh also combines `~/.codex/sessions` with `~/.codex/archived_sessions` and reports successful Ollama requests from retained local server logs separately because those logs do not contain token totals. Refresh the image, coverage metadata, and displayed date range with:
 
 - `npm run refresh:slopmeter`
 
-The command updates `public/heatmap-last-year.png`, writes a content-hashed image for cache-safe publishing, and updates `content/slopmeter.json` to reference that versioned asset. Commit the generated files together so the published label always describes the published image. The Cloudflare runner does not regenerate this private local-usage snapshot during deployment.
+The command stages hard links to active and archived Codex session logs inside a temporary directory under `CODEX_HOME`, runs a merged Slopmeter scan, then removes the temporary view. It updates `public/heatmap-last-year.svg`, writes a content-hashed image for cache-safe publishing, and updates `content/slopmeter.json` to reference that versioned asset and describe provider coverage. Commit the generated files together so the published label always describes the published image. The Cloudflare runner does not regenerate this private local-usage snapshot during deployment.
 
 ### Provisioning the Cloudflare deploy token (scripted)
 

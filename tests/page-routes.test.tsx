@@ -23,10 +23,13 @@ describe("route pages", () => {
     expect(screen.getByText("$415M")).toBeInTheDocument();
     expect(screen.getByText("Aug 2007 – Jun 2026")).toBeInTheDocument();
     expect(screen.getByText("7 leadership roles; most recently Senior Vice President, CIO")).toBeInTheDocument();
-    expect(screen.getByText(/Token-usage snapshot from local AI-assisted development activity/i)).toBeInTheDocument();
-    const slopmeterImage = screen.getByAltText(/Slopmeter usage snapshot/i);
+    expect(screen.getByText(/Combined token usage from Claude Code, Codex, and OpenCode/i)).toBeInTheDocument();
+    expect(screen.getByText(/including archived Codex sessions and Qwen models recorded by OpenCode/i)).toBeInTheDocument();
+    expect(screen.getByText(/Ollama coverage:/i)).toBeInTheDocument();
+    expect(screen.getByText(/Those server logs do not expose token totals/i)).toBeInTheDocument();
+    const slopmeterImage = screen.getByAltText(/Combined Slopmeter usage snapshot/i);
     expect(slopmeterImage).toBeInTheDocument();
-    expect(slopmeterImage.getAttribute("src")).toMatch(/heatmap-last-year\.[a-f0-9]{12}\.png/);
+    expect(slopmeterImage.getAttribute("src")).toMatch(/heatmap-last-year\.[a-f0-9]{12}\.svg/);
     expect(screen.getByRole("link", { name: /US 12184814/i })).toHaveAttribute(
       "href",
       "https://patents.google.com/patent/US12184814B1/en"
