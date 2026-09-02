@@ -92,6 +92,13 @@ function formatSnapshotDate(date: string) {
   }).format(new Date(`${date}T00:00:00Z`));
 }
 
+function formatProviderList(providers: string[]) {
+  return new Intl.ListFormat("en-US", {
+    style: "long",
+    type: "conjunction"
+  }).format(providers);
+}
+
 function formatPatentDate(date: string) {
   return new Intl.DateTimeFormat("en-US", {
     month: "short",
@@ -179,7 +186,13 @@ export function HomeShowcase({ profile, projects, resume }: HomeShowcaseProps) {
       ? `${yearFromDate(resume.patents[resume.patents.length - 1].issuedAt)}-${yearFromDate(resume.patents[0].issuedAt)}`
       : null;
   const slopmeterWindow = `${formatSnapshotDate(slopmeterSnapshot.startDate)} - ${formatSnapshotDate(slopmeterSnapshot.endDate)}`;
-  const slopmeterAlt = `Slopmeter usage snapshot for ${formatSnapshotDate(slopmeterSnapshot.startDate)} through ${formatSnapshotDate(slopmeterSnapshot.endDate)}.`;
+  const slopmeterProviders = formatProviderList(slopmeterSnapshot.providers);
+  const slopmeterAlt = `Combined Slopmeter usage snapshot for ${slopmeterProviders} from ${formatSnapshotDate(slopmeterSnapshot.startDate)} through ${formatSnapshotDate(slopmeterSnapshot.endDate)}.`;
+  const ollamaCoverage = slopmeterSnapshot.coverage.ollama;
+  const ollamaWindow =
+    ollamaCoverage.startDate && ollamaCoverage.endDate
+      ? `${formatSnapshotDate(ollamaCoverage.startDate)} - ${formatSnapshotDate(ollamaCoverage.endDate)}`
+      : "No retained request history";
 
   return (
     <div className="space-y-8 sm:space-y-10">
@@ -668,8 +681,8 @@ export function HomeShowcase({ profile, projects, resume }: HomeShowcaseProps) {
                   AI development activity
                 </p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Token-usage snapshot from local AI-assisted development activity for{" "}
-                  {slopmeterWindow}.
+                  Combined token usage from {slopmeterProviders}, including archived Codex sessions and
+                  Qwen models recorded by OpenCode, for {slopmeterWindow}.
                 </p>
               </div>
             </div>
@@ -684,6 +697,12 @@ export function HomeShowcase({ profile, projects, resume }: HomeShowcaseProps) {
                 className="h-auto min-w-[42rem] rounded-lg border border-white/5 sm:min-w-0 sm:w-full"
               />
             </div>
+
+            <p className="px-2 pt-3 text-xs leading-relaxed text-muted-foreground">
+              Ollama coverage: {ollamaCoverage.requestCount.toLocaleString("en-US")} successful local
+              inference requests in retained logs ({ollamaWindow}). Those server logs do not expose token
+              totals, so request counts are reported separately and are not added to the chart.
+            </p>
           </div>
         </Card>
       </section>

@@ -1,7 +1,25 @@
 {
-  "provider": "codex",
-  "generatedAt": "2026-09-02T16:17:17.552Z",
+  "provider": "all",
+  "providers": [
+    "Claude Code",
+    "Codex",
+    "OpenCode"
+  ],
+  "generatedAt": "2026-09-02T17:11:14.994Z",
   "startDate": "2025-09-02",
   "endDate": "2026-09-02",
-  "image": "/heatmap-last-year.ed99273c92a4.png"
+  "image": "/heatmap-last-year.7a1dd2e71b60.svg",
+  "coverage": {
+    "codex": {
+      "activeSessionFiles": 2129,
+      "archivedSessionFiles": 691
+    },
+    "qwenIncludedVia": "OpenCode",
+    "ollama": {
+      "requestCount": 745,
+      "startDate": "2026-08-19",
+      "endDate": "2026-09-01",
+      "tokenTotalsAvailable": false
+    }
+  }
 }
