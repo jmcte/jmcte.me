@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "sync:data": "node scripts/sync-public-data.mjs",
+    "refresh:slopmeter": "node scripts/refresh-slopmeter.mjs",
     "prebuild": "npm run sync:data",
     "test": "vitest run",
     "pretest": "npm run sync:data",

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import slopmeterSnapshot from "@/content/slopmeter.json";
 import type {
   PatentItem,
   ProfilePayload,
@@ -37,17 +38,6 @@ type Lane = {
   summary: string;
   icon: typeof ShieldCheckIcon;
 };
-
-const slopmeterSnapshot = {
-  startDate: "2025-04-16",
-  endDate: "2026-04-16",
-  image: {
-    src: "/heatmap-last-year.png",
-    alt: "Slopmeter usage snapshot for April 16, 2025 through April 16, 2026.",
-    width: 4000,
-    height: 1699
-  }
-} as const;
 
 const signalMetrics = [
   {
@@ -170,6 +160,7 @@ export function HomeShowcase({ profile, projects, resume }: HomeShowcaseProps) {
       ? `${yearFromDate(resume.patents[resume.patents.length - 1].issuedAt)}-${yearFromDate(resume.patents[0].issuedAt)}`
       : null;
   const slopmeterWindow = `${formatSnapshotDate(slopmeterSnapshot.startDate)} - ${formatSnapshotDate(slopmeterSnapshot.endDate)}`;
+  const slopmeterAlt = `Slopmeter usage snapshot for ${formatSnapshotDate(slopmeterSnapshot.startDate)} through ${formatSnapshotDate(slopmeterSnapshot.endDate)}.`;
 
   return (
     <div className="space-y-8 sm:space-y-10">
@@ -666,10 +657,10 @@ export function HomeShowcase({ profile, projects, resume }: HomeShowcaseProps) {
 
             <div className="overflow-x-auto">
               <Image
-                src={slopmeterSnapshot.image.src}
-                alt={slopmeterSnapshot.image.alt}
-                width={slopmeterSnapshot.image.width}
-                height={slopmeterSnapshot.image.height}
+                src="/heatmap-last-year.png"
+                alt={slopmeterAlt}
+                width={4000}
+                height={1699}
                 loading="eager"
                 className="h-auto min-w-[42rem] rounded-lg border border-white/5 sm:min-w-0 sm:w-full"
               />
