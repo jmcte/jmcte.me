@@ -56,7 +56,7 @@ npm run dev
 
 ### Automated push deployment (GitHub Actions)
 
-This repo includes `.github/workflows/pages-deploy.yml` which runs on push to `main` and deploys `out` to Cloudflare Pages.
+This repo includes `.github/workflows/pages-deploy.yml` which runs on push to `main` and deploys `out` to Cloudflare Pages with `cloudflare/wrangler-action`.
 
 Required repository secrets:
 - `CLOUDFLARE_API_TOKEN`
@@ -65,7 +65,15 @@ Required repository secrets:
 Expected Pages project name in workflow:
 - `jmcte-me` by default (can be overridden via GitHub Actions variable `CLOUDFLARE_PAGES_PROJECT`).
 
-If your project name is different, set `CLOUDFLARE_PAGES_PROJECT` in GitHub Actions variables, or update `projectName` in the workflow.
+If your project name is different, set `CLOUDFLARE_PAGES_PROJECT` in GitHub Actions variables, or update the Wrangler command in the workflow.
+
+### Refreshing the Slopmeter snapshot
+
+The homepage Slopmeter image is generated from local Codex usage data. Refresh both the image and its displayed date range with:
+
+- `npm run refresh:slopmeter`
+
+The command updates `public/heatmap-last-year.png` and `content/slopmeter.json` together. Commit both files so the published label always describes the published image. The Cloudflare runner does not regenerate this private local-usage snapshot during deployment.
 
 ### Provisioning the Cloudflare deploy token (scripted)
 
