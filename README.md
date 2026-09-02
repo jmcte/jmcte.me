@@ -73,7 +73,7 @@ The homepage Slopmeter image is generated from local Codex usage data. Refresh b
 
 - `npm run refresh:slopmeter`
 
-The command updates `public/heatmap-last-year.png` and `content/slopmeter.json` together. Commit both files so the published label always describes the published image. The Cloudflare runner does not regenerate this private local-usage snapshot during deployment.
+The command updates `public/heatmap-last-year.png`, writes a content-hashed image for cache-safe publishing, and updates `content/slopmeter.json` to reference that versioned asset. Commit the generated files together so the published label always describes the published image. The Cloudflare runner does not regenerate this private local-usage snapshot during deployment.
 
 ### Provisioning the Cloudflare deploy token (scripted)
 

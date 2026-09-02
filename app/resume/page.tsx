@@ -42,11 +42,15 @@ export default async function ResumePage() {
         <div className="space-y-4">
           {resume.experience.map((entry) => (
             <Card key={`${entry.org}-${entry.title}`} className="space-y-3 p-5">
-              <div className="flex flex-wrap justify-between gap-2">
-                <h4 className="text-lg font-semibold">{entry.title}</h4>
-                <span className="text-sm text-muted-foreground">{formatDateRange(entry.startAt, entry.endAt)}</span>
+              <div className="grid gap-2 sm:grid-cols-[minmax(0,1fr)_12rem] sm:items-start sm:gap-6">
+                <div className="space-y-1">
+                  <h4 className="text-lg font-semibold">{entry.title}</h4>
+                  <p className="text-sm text-muted-foreground">{entry.org}</p>
+                </div>
+                <p className="text-sm tabular-nums text-muted-foreground sm:justify-self-end sm:whitespace-nowrap sm:text-right">
+                  {formatDateRange(entry.startAt, entry.endAt)}
+                </p>
               </div>
-              <p className="text-sm text-muted-foreground">{entry.org}</p>
               <ul className="ml-5 list-disc space-y-1">
                 {entry.bullets.map((bullet) => (
                   <li key={bullet} className="text-sm text-muted-foreground">
