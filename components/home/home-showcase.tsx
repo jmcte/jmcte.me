@@ -30,7 +30,7 @@ type HomeShowcaseProps = {
 type TrajectoryStop = {
   org: string;
   role: string;
-  years: string;
+  dates: string;
 };
 
 type Lane = {
@@ -104,47 +104,66 @@ function yearFromDate(date: string) {
   return new Date(date).getUTCFullYear();
 }
 
+function formatCareerDate(date: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC"
+  }).format(new Date(`${date}T00:00:00Z`));
+}
+
+function normalizeTrajectoryOrganization(org: string) {
+  const organization = org.split(" (")[0];
+  return organization === "Honeywell International" ? "Honeywell" : organization;
+}
+
 function buildTrajectory(experience: ResumeSectionItem[]): TrajectoryStop[] {
   const groupedStops = new Map<
     string,
     {
       org: string;
       role: string;
-      startYear: number;
-      endYear?: number;
+      roleCount: number;
+      startAt: string;
+      endAt?: string;
     }
   >();
 
   for (const entry of experience) {
-    const org = entry.org.split(" (")[0];
+    const org = normalizeTrajectoryOrganization(entry.org);
     const role = entry.title.split(" - ")[0].split(" – ")[0].trim();
-    const startYear = yearFromDate(entry.startAt);
-    const endYear = entry.endAt ? yearFromDate(entry.endAt) : undefined;
     const existing = groupedStops.get(org);
 
     if (!existing) {
       groupedStops.set(org, {
         org,
         role,
-        startYear,
-        endYear
+        roleCount: 1,
+        startAt: entry.startAt,
+        endAt: entry.endAt
       });
       continue;
     }
 
-    existing.startYear = Math.min(existing.startYear, startYear);
-    existing.endYear =
-      existing.endYear === undefined || endYear === undefined
+    existing.roleCount += 1;
+    existing.startAt = existing.startAt < entry.startAt ? existing.startAt : entry.startAt;
+    existing.endAt =
+      existing.endAt === undefined || entry.endAt === undefined
         ? undefined
-        : Math.max(existing.endYear, endYear);
+        : existing.endAt > entry.endAt
+          ? existing.endAt
+          : entry.endAt;
   }
 
   return [...groupedStops.values()]
-    .sort((left, right) => left.startYear - right.startYear)
+    .sort((left, right) => left.startAt.localeCompare(right.startAt))
     .map((stop) => ({
       org: stop.org,
-      role: stop.role,
-      years: `${stop.startYear}-${stop.endYear ?? "Now"}`
+      role:
+        stop.roleCount > 1
+          ? `${stop.roleCount} leadership roles; most recently ${stop.role}`
+          : stop.role,
+      dates: `${formatCareerDate(stop.startAt)} – ${stop.endAt ? formatCareerDate(stop.endAt) : "Present"}`
     }));
 }
 
@@ -421,7 +440,7 @@ export function HomeShowcase({ profile, projects, resume }: HomeShowcaseProps) {
             {trajectory.map((stop, index) => (
               <div
                 key={stop.org}
-                className="grid gap-3 rounded-lg border border-border/70 bg-card/65 px-5 py-4 sm:grid-cols-[auto_1fr_auto]"
+                className="grid gap-3 rounded-lg border border-border/70 bg-card/65 px-5 py-4 sm:grid-cols-[auto_minmax(0,1fr)_12rem]"
               >
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/12 text-sm font-semibold text-primary">
@@ -432,8 +451,8 @@ export function HomeShowcase({ profile, projects, resume }: HomeShowcaseProps) {
                   <p className="text-lg font-semibold text-foreground">{stop.org}</p>
                   <p className="text-sm text-muted-foreground">{stop.role}</p>
                 </div>
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary/75 sm:text-right">
-                  {stop.years}
+                <p className="text-sm font-semibold tabular-nums text-primary/75 sm:justify-self-end sm:whitespace-nowrap sm:text-right">
+                  {stop.dates}
                 </p>
               </div>
             ))}
@@ -657,7 +676,7 @@ export function HomeShowcase({ profile, projects, resume }: HomeShowcaseProps) {
 
             <div className="overflow-x-auto">
               <Image
-                src="/heatmap-last-year.png"
+                src={slopmeterSnapshot.image}
                 alt={slopmeterAlt}
                 width={4000}
                 height={1699}
