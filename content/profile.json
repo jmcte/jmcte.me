@@ -1,11 +1,11 @@
 {
   "name": "John McChesney TenEyck Jr.",
   "handle": "jmcte",
-  "title": "CIO / CTO | Enterprise Technology Executive | Financial Services, Architecture, Infrastructure and Operations",
-  "bio": "Enterprise technology executive with 25+ years leading architecture, infrastructure, shared services, operations, and large-scale transformation in regulated global environments. Most recently led a 2,500-person engineering, infrastructure, and IT business services organization with $800M budget responsibility and oversight of $100M in annual IT projects.",
+  "title": "CIO / CTO | Enterprise Financial Services | Transformation, Architecture, Operations, Resilience and AI",
+  "bio": "Enterprise financial-services CIO and CTO with 25+ years leading technology strategy, architecture, shared services, operations, and transformation. Most recently led a 3,200-person global workforce with direct accountability for a $1.2B budget while shaping strategy and execution across an approximately $4B technology portfolio.",
   "location": "Texas, USA",
   "website": "https://jmcte.me",
-  "updatedAt": "2026-06-07T00:00:00Z",
+  "updatedAt": "2026-09-01T00:00:00Z",
   "socials": [
     {
       "label": "GitHub",
@@ -22,19 +22,19 @@
   "pronouns": "he/him",
   "skills": [
     "Technology Strategy",
+    "Business-Aligned Transformation",
     "Enterprise Architecture",
     "Technology Operations",
     "Operational Resilience",
-    "Cloud Strategy",
-    "Digital Transformation",
+    "Cloud and FinOps",
+    "Platform Engineering",
     "IT Governance",
-    "Infrastructure Modernization",
-    "Artificial Intelligence",
+    "Technology Economics",
+    "M&A and Venture Diligence",
+    "AI and Automation",
     "Vendor Management",
     "IT Financial Management"
   ],
   "contactVisibility": "private",
-  "certifications": [
-    "Quality assurance leadership and enterprise transformation experience"
-  ]
+  "certifications": []
 }

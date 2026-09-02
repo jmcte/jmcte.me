@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     absolute: "John McChesney TenEyck Jr. | JMCTE"
   },
   description:
-    "CIO and CTO-level executive technology portfolio for John McChesney TenEyck Jr."
+    "Enterprise financial-services CIO and CTO portfolio for John McChesney TenEyck Jr."
 };
 
 export default async function HomePage() {

@@ -1,6 +1,7 @@
 # Hello, I’m John.
 
-I am an enterprise technology executive with 25+ years leading architecture, infrastructure, shared services, operations, and large-scale transformation in regulated global environments. My background spans financial services, manufacturing, aviation, and consulting, with most of that work centered on modernization, resilience, and disciplined execution in complex enterprises.
+I am an enterprise financial-services CIO and CTO with 25+ years leading technology strategy, architecture, shared services, operations, and transformation in regulated global environments. I connect the economics and operating demands of P&C, banking, life, investment, and retirement to modernization, resilience, M&A, and AI-enabled engineering decisions.
 
-- Most recently led a 2,500-person engineering, infrastructure, and IT business services organization with $800M budget responsibility.
-- Earlier leadership roles span USAA, Honeywell, LSG Sky Chefs, and Accenture, with executive responsibility across architecture, infrastructure, quality, operations, and transformation programs.
+- Most recently led a 3,200-person global workforce with direct accountability for a $1.2B budget and influence across an approximately $4B technology portfolio.
+- Delivered a $415M departmental budget reduction, guided a $1.7B Guidewire modernization, oversaw technology for the Noblr acquisition, and advised a $300M venture fund.
+- Regularly presented to boards, led OCC and Federal Reserve reviews, and was named inventor on 15 issued U.S. patents.

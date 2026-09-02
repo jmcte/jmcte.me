@@ -7,7 +7,7 @@ import { PersonStructuredData } from "@/components/structured-data";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About John McChesney TenEyck Jr., an enterprise technology executive focused on architecture, infrastructure, operations, and regulated-industry modernization."
+    "About John McChesney TenEyck Jr., an enterprise financial-services CIO and CTO focused on transformation, architecture, operations, resilience, and AI."
 };
 
 export default async function AboutPage() {

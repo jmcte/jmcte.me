@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-07T00:00:00Z",
+  "updatedAt": "2026-09-01T00:00:00Z",
   "experience": [
     {
       "title": "Senior Vice President, CIO – Shared Services and Infrastructure",
@@ -7,12 +7,13 @@
       "startAt": "2023-02-01",
       "endAt": "2026-06-08",
       "bullets": [
-        "Led USAA's shared services and infrastructure organization — IT PMO, core infrastructure (data centers, network, compute, and cloud), corporate IT, enterprise vendor management, and IT-wide governance — with $800M+ budget responsibility and oversight of $100M+ in annual IT projects.",
-        "Delivered a $294M reduction in third-party run-rate across IT, exceeding a $265M target a full year early without disrupting delivery.",
-        "Built and cut over a new production data center outside the ERCOT power grid in 18 months, retiring a long-standing enterprise resilience risk and self-funding the build within run budget.",
-        "Modernized the enterprise network from a legacy platform to a single modern fabric in 10 months and eradicated the majority of legacy infrastructure technical debt.",
-        "Converted a 25-year-old PeopleSoft general ledger to a cloud Oracle platform and scaled cloud adoption to enable 300+ cloud-native applications under managed FinOps.",
-        "Deployed generative-AI tooling for engineering and infrastructure teams and AI-powered ServiceNow platforms."
+        "Owned the shared technology foundations and operational services supporting USAA's P&C, banking, life, investment, retirement, and enterprise functions, including core infrastructure, engineering platforms, corporate systems, the IT PMO, vendor management, and the technology operating model. Led 1,200 employees and 2,000 partners with direct accountability for a $1.2B budget.",
+        "Translated line-of-business priorities, including claims operations, underwriting economics, payment processing and settlement, Medicare annual enrollment demand, regulatory obligations, and customer servicing, into investment, capacity, resilience, recovery, and modernization priorities.",
+        "Reduced the directly managed departmental budget by $415M, from $1.2B to $785M, through automation-enabled employee and partner reductions, hardware and software renegotiation, modernization, and consolidation. This included a portion of the $294M enterprise-wide third-party labor takeout, which exceeded the $265M target by $29M and finished one year early.",
+        "Built and brought online a greenfield production data center outside the ERCOT grid in 18 months, self-funding the $52M investment and retiring a decade-old enterprise resilience risk.",
+        "Modernized the enterprise network from legacy Cisco to a unified Arista platform in 10 months and eliminated 90% of legacy infrastructure technology debt.",
+        "Tripled cloud capacity under managed FinOps, enabled 300+ cloud-native applications, and scaled generative-AI tools across engineering, infrastructure, and ServiceNow operations.",
+        "Presented quarterly to the USAA Board and USAA Bank Board and led recurring OCC and Federal Reserve reviews covering strategy, material risk, SDLC controls, resilience, and performance."
       ]
     },
     {
@@ -21,10 +22,12 @@
       "startAt": "2015-08-01",
       "endAt": "2023-01-31",
       "bullets": [
-        "Led enterprise architecture across USAA's multi-line business, including Life, Property & Casualty, Banking, and enterprise technology.",
-        "Set architecture direction for cloud adoption across line-of-business platforms.",
-        "Advanced machine learning and artificial intelligence applications in financial-services use cases.",
-        "Provided enterprise technology direction during a significant period of modernization and platform change."
+        "Served as enterprise technology strategist across P&C, banking, life, investment, and retirement businesses, leading 100+ technical architects and 10 senior technology fellows.",
+        "Guided the technology decision and cloud-first strategy for a $1.7B, seven-year Guidewire policy and claims modernization supporting an approximately $40B P&C business.",
+        "Advised and reviewed all strategic venture-capital investments for USAA's $300M investment fund, evaluating technology, architecture, integration, risk, scalability, and strategic fit.",
+        "Served as the IT lead overseeing USAA's acquisition of Noblr, directing technology diligence, integration strategy, architecture, risk, and execution readiness.",
+        "Selected Oracle Cloud ERP as the enterprise general-ledger platform and shaped the integration and modernization approach later delivered company-wide.",
+        "Established the SRE Center of Excellence and enterprise reliability patterns to strengthen production accountability, service health, and resilience."
       ]
     },
     {
@@ -33,8 +36,8 @@
       "startAt": "2017-04-01",
       "endAt": "2017-10-31",
       "bullets": [
-        "Led 1,200+ technology resources supporting USAA's Property & Casualty business during a leadership transition.",
-        "Drove initial selection of a core-system replacement for a $20B+ direct written premium insurance company, replacing a 20-year legacy platform."
+        "Held accountability for a $700M P&C technology budget and 1,200+ resources during a leadership transition.",
+        "Built the business case and prepared business, product, engineering, and operations teams for the Guidewire transformation, reshaped talent and delivery capacity, and transitioned the portfolio to the permanent CIO."
       ]
     },
     {
@@ -43,7 +46,7 @@
       "startAt": "2014-10-01",
       "endAt": "2015-08-31",
       "bullets": [
-        "Led the software development organization supporting USAA's Property & Casualty business."
+        "Held end-to-end accountability for customer-facing and production systems across the P&C division, aligning platform delivery with claims, underwriting, policy, billing, and member-service priorities."
       ]
     },
     {
@@ -52,9 +55,8 @@
       "startAt": "2011-10-01",
       "endAt": "2014-10-31",
       "bullets": [
-        "Led a 190-employee and 950+ contractor QA organization supporting roughly $650M+ in annual software development.",
-        "Built a 3-year strategy for the QA organization and led its transition to agile development practices.",
-        "Managed $133M+ budget."
+        "Led 190 employees and 950+ partners on a $133M budget, providing centralized quality engineering and delivery assurance across an approximately $750M software portfolio.",
+        "Restructured the Testing Center of Excellence, generating $19M in annual efficiency gains and a $9M / 200-FTE reduction while improving quality and delivery assurance."
       ]
     },
     {
@@ -65,7 +67,7 @@
       "bullets": [
         "Led day-to-day operations for distributed systems, server environments, desktop support, and core operational tooling.",
         "Managed 11 groups with 140+ employees and roughly $40M operating budget.",
-        "Achieved more than 70% datacenter virtualization and negotiated multimillion-dollar hardware and software deals that delivered more than $5M savings in 2011."
+        "Increased data-center virtualization from 40% to 80%, expanded infrastructure capacity 350% at flat cost, and negotiated multimillion-dollar hardware and software deals that delivered more than $5M in savings in 2011."
       ]
     },
     {
@@ -261,9 +263,7 @@
     }
   ],
   "publications": [],
-  "certifications": [
-    "Quality Assurance leadership and enterprise transformation experience"
-  ],
+  "certifications": [],
   "links": [
     {
       "label": "GitHub",

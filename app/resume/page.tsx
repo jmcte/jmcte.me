@@ -9,9 +9,16 @@ export const metadata: Metadata = {
   description: "Professional experience and education for jmcte.me."
 };
 
+function formatCareerDate(date: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC"
+  }).format(new Date(`${date}T00:00:00Z`));
+}
+
 function formatDateRange(startAt: string, endAt?: string) {
-  const end = endAt ? endAt : "Present";
-  return `${startAt} - ${end}`;
+  return `${formatCareerDate(startAt)} – ${endAt ? formatCareerDate(endAt) : "Present"}`;
 }
 
 function formatPatentDate(issuedAt: string) {
@@ -28,7 +35,7 @@ export default async function ResumePage() {
 
   return (
     <div className="space-y-10">
-      <Section heading="Resume" description="Selected executive and technical roles from a 30+ year career." />
+      <Section heading="Resume" description="Selected leadership and technical roles from a 25+ year career." />
 
       <section data-site-loader-item className="space-y-4">
         <h3 className="text-xl font-semibold">Experience</h3>

@@ -2,7 +2,7 @@
   "schema_version": "v1",
   "name_for_human": "jmcte.me",
   "name_for_model": "jmcte_profile",
-  "description_for_human": "Professional profile and career data for John McChesney TenEyck Jr., CIO / CTO | Enterprise Technology Executive | Financial Services, Architecture, Infrastructure and Operations.",
+  "description_for_human": "Professional profile and career data for John McChesney TenEyck Jr., CIO / CTO | Enterprise Financial Services | Transformation, Architecture, Operations, Resilience and AI.",
   "description_for_model": "Provides structured access to John McChesney TenEyck Jr.'s professional profile, resume, patents, skills, and projects. Use this to answer questions about career history, technical expertise, patents, or current role. Contact is private; direct all inquiries to https://jmcte.me/contact.",
   "auth": {
     "type": "none"

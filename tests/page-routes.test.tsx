@@ -18,6 +18,9 @@ describe("route pages", () => {
     expect(screen.getByText("Patent record")).toBeInTheDocument();
     expect(screen.getByText("Featured public repository")).toBeInTheDocument();
     expect(screen.getByText("AI development activity")).toBeInTheDocument();
+    expect(screen.getByText("3,200")).toBeInTheDocument();
+    expect(screen.getByText("$1.2B")).toBeInTheDocument();
+    expect(screen.getByText("$415M")).toBeInTheDocument();
     expect(screen.getByText(/Token-usage snapshot from local AI-assisted development activity/i)).toBeInTheDocument();
     expect(screen.getByAltText(/Slopmeter usage snapshot/i)).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /US 12184814/i })).toHaveAttribute(
@@ -30,7 +33,7 @@ describe("route pages", () => {
   it("renders about page content", async () => {
     render(await AboutPage());
     expect(screen.getAllByRole("heading", { name: "About" })).toHaveLength(1);
-    expect(screen.getByText(/enterprise technology executive with 25\+ years/i)).toBeInTheDocument();
+    expect(screen.getByText(/enterprise financial-services CIO and CTO with 25\+ years/i)).toBeInTheDocument();
   });
 
   it("renders projects page content", async () => {
@@ -44,6 +47,7 @@ describe("route pages", () => {
     expect(screen.getByRole("heading", { name: "Resume" })).toBeInTheDocument();
     expect(screen.getByText("Experience")).toBeInTheDocument();
     expect(screen.getByText("Patents")).toBeInTheDocument();
+    expect(screen.getByText("Feb 2023 – Jun 2026")).toBeInTheDocument();
     expect(screen.getAllByRole("link", { name: /US 12184814/i })[0]).toHaveAttribute(
       "href",
       "https://patents.google.com/patent/US12184814B1/en"
